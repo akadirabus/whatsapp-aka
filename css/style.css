@@ -1,0 +1,292 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+*:focus {
+  outline: 0;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  height: 100%;
+}
+
+.chat {
+  height: 100%;
+  display: flex;
+}
+.chat .sidebar {
+  width: 400px;
+  min-width: 400px;
+  background-color: #EDEDED;
+  display: flex;
+  flex-direction: column;
+}
+.chat .sidebar .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 10px 0 15px;
+}
+.chat .sidebar .top img {
+  width: 42px;
+  height: 42px;
+  border-radius: 42px;
+}
+.chat .sidebar .top .settings ul {
+  display: flex;
+}
+.chat .sidebar .top .settings ul:last-child {
+  margin-right: 15px;
+}
+.chat .sidebar .top .settings ul li {
+  margin-left: 30px;
+}
+.chat .sidebar .top .settings ul li i {
+  font-size: 18px;
+  color: #989A9C;
+}
+.chat .sidebar .info {
+  margin-top: 10px;
+  height: 110px;
+  background-color: #9DE1FE;
+  display: flex;
+  justify-content: left;
+  padding: 20px;
+  align-items: center;
+}
+.chat .sidebar .info .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #fff;
+}
+.chat .sidebar .info .icon a i {
+  color: #9DE1FE;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding-top: 15px;
+}
+.chat .sidebar .info .text {
+  flex-direction: row;
+  padding-left: 25px;
+  color: #414C50;
+}
+.chat .sidebar .info .text .text-content {
+  font-size: 14px;
+}
+.chat .sidebar .info .text .text-content i {
+  font-size: 12px;
+  color: #414C50;
+}
+.chat .sidebar .search {
+  height: 50px;
+  min-height: 50px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+.chat .sidebar .search input {
+  font-size: 14px;
+  width: 100%;
+  height: 35px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 0 35px 0 55px;
+}
+.chat .sidebar .search input::placeholder {
+  color: rgba(162, 162, 162, 0.8);
+}
+.chat .sidebar .search i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #999;
+  margin-left: 25px;
+}
+.chat .sidebar .contacts {
+  overflow: auto;
+  background-color: #fff;
+}
+.chat .sidebar .contacts ul li {
+  border-bottom: 1px solid #ddd;
+}
+.chat .sidebar .contacts ul li a {
+  display: flex;
+  height: 72px;
+  align-items: center;
+  padding: 0 15px;
+}
+.chat .sidebar .contacts ul li a .notification {
+  width: 22px;
+  height: 22px;
+  border-radius: 22px;
+  background-color: #06D755;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  line-height: 21px;
+  margin-left: auto;
+}
+.chat .sidebar .contacts ul li a .contact .name {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.chat .sidebar .contacts ul li a .contact .message {
+  font-size: 13px;
+  color: #999;
+}
+.chat .sidebar .contacts ul li a .send-time {
+  margin-left: auto;
+  font-size: 11px;
+}
+.chat .sidebar .contacts ul li a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+.chat .sidebar .contacts ul li a:hover {
+  background-color: #F5F5F5;
+}
+.chat .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #ddd;
+}
+.chat .content .message-content {
+  overflow: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.chat .content .message-content::before {
+  content: "";
+  margin-bottom: auto;
+}
+.chat .content .message-content .message {
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+.chat .content .message-content .message.me {
+  align-self: flex-end;
+}
+.chat .content .message-content .message.me .text {
+  background-color: #2196f3;
+  color: #fff;
+}
+.chat .content .message-content .message.me .send-time {
+  text-align: right;
+}
+.chat .content .message-content .message .text {
+  padding: 6px 12px;
+  background: #f7f7f7;
+  border-radius: 20px;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.chat .content .message-content .message .send-time {
+  font-size: 12px;
+  color: #999;
+}
+.chat .content .message-header {
+  height: 50px;
+  min-height: 50px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+.chat .content .message-header .actions ul {
+  display: flex;
+}
+.chat .content .message-header .actions ul li {
+  margin-left: 10px;
+}
+.chat .content .message-header .actions ul li a {
+  font-size: 18px;
+  color: #999;
+}
+.chat .content .message-header .actions ul li a:hover {
+  color: #222;
+}
+.chat .content .message-header .user-info {
+  display: flex;
+}
+.chat .content .message-header .user-info img {
+  align-items: center;
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+}
+.chat .content .message-header .user-info .user .name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #222;
+}
+.chat .content .message-header .user-info .user .lastTime {
+  font-size: 13px;
+  color: #999;
+}
+.chat .content .message-form {
+  border-top: 1px solid #ddd;
+  background-color: #eee;
+  padding: 10px 10px;
+}
+.chat .content .message-form ul {
+  display: flex;
+}
+.chat .content .message-form ul li {
+  margin: 0 5px;
+}
+.chat .content .message-form ul li a {
+  width: 36px;
+  height: 36px;
+  border-radius: 36px;
+  line-height: 36px;
+  display: block;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+.chat .content .message-form ul li.input {
+  flex: 1;
+}
+.chat .content .message-form ul li.input input {
+  height: 36px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 36px;
+  font-size: 14px;
+  padding: 0 15px;
+}
+.chat .content .message-form ul li.btn-emoji a {
+  background-color: #339af0;
+}
+.chat .content .message-form ul li.btn-record a {
+  background-color: #ff5722;
+}
+.chat .content .message-form ul li.btn-photo a {
+  background-color: #4caf50;
+}
+
+/*# sourceMappingURL=style.css.map */
