@@ -25,6 +25,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -41,6 +42,9 @@
       <option name="presentableId" value="Default" />
       <updated>1608641114320</updated>
       <workItem from="1608641115491" duration="11484000" />
+      <workItem from="1608922790015" duration="5492000" />
+      <workItem from="1608981673129" duration="4578000" />
+      <workItem from="1608986303389" duration="4864000" />
     </task>
     <servers />
   </component>
